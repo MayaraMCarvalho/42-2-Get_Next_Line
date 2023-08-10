@@ -1,0 +1,19 @@
+int	main(void)
+{
+	função(parametro);
+return (0);
+}
+
+
+clear && gcc -Wall -Wextra -Werror -D BUFFER_SIZE=25 *.c && ./a.out && rm a.out
+
+
+norminette -RCheckForbiddenSourceHeader
+
+
+clear && gcc -Wall -Wextra -Werror *.c && ./a.out && rm a.out
+
+
+
+valgrind --leak-check=full --show-leak-kinds=all ./a.out
+valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./a.out
